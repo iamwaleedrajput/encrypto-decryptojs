@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-npm i encrypto-decrypto --save
+npm i encrypto-decryptojs --save
 ```
 
 ## Usage
@@ -12,25 +12,25 @@ To encrypt
 
 ```js
 import React from "react";
-import { encrypto } from "./lib";
+import { encrypto } from "encrypto-decryptojs";
 
 export default function App() {
   const encrypted = encrypto(data);
-  return <div>{enc}</div>;
+  return <div>{encrypted}</div>;
 }
 ```
 
 To decrypt
-use encrypted data to decrted it
+use encrypted data to decrypt it
 
 ```js
 import React from "react";
-import { encrypto, decrypto } from "./lib";
+import { encrypto, decrypto } from "encrypto-decryptojs";
 
 export default function App() {
   const encrypted = encrypto(data);
-  const decrypted = encrypted;
+  const decrypted = decrypto(encrypted);
 
-  return <div>{enc}</div>;
+  return <div>{decrypted}</div>;
 }
 ```
